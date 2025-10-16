@@ -16,8 +16,8 @@ UECARDEN_API UClass* Z_Construct_UClass_AMyActorTest_NoRegister();
 UPackage* Z_Construct_UPackage__Script_UECArden();
 // End Cross Module References
 
-// Begin Class AMyActorTest Function MyFunction
-struct Z_Construct_UFunction_AMyActorTest_MyFunction_Statics
+// Begin Class AMyActorTest Function DemostrateFundamentals
+struct Z_Construct_UFunction_AMyActorTest_DemostrateFundamentals_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
@@ -33,31 +33,31 @@ struct Z_Construct_UFunction_AMyActorTest_MyFunction_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyActorTest_MyFunction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyActorTest, nullptr, "MyFunction", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyActorTest_MyFunction_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMyActorTest_MyFunction_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_AMyActorTest_MyFunction()
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMyActorTest_DemostrateFundamentals_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMyActorTest, nullptr, "DemostrateFundamentals", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMyActorTest_DemostrateFundamentals_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMyActorTest_DemostrateFundamentals_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AMyActorTest_DemostrateFundamentals()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMyActorTest_MyFunction_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMyActorTest_DemostrateFundamentals_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(AMyActorTest::execMyFunction)
+DEFINE_FUNCTION(AMyActorTest::execDemostrateFundamentals)
 {
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->MyFunction();
+	P_THIS->DemostrateFundamentals();
 	P_NATIVE_END;
 }
-// End Class AMyActorTest Function MyFunction
+// End Class AMyActorTest Function DemostrateFundamentals
 
 // Begin Class AMyActorTest
 void AMyActorTest::StaticRegisterNativesAMyActorTest()
 {
 	UClass* Class = AMyActorTest::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
-		{ "MyFunction", &AMyActorTest::execMyFunction },
+		{ "DemostrateFundamentals", &AMyActorTest::execDemostrateFundamentals },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -76,19 +76,35 @@ struct Z_Construct_UClass_AMyActorTest_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MyFloatVariable_MetaData[] = {
 		{ "Category", "MyActorTest" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//ejemplo de una variable de instancia publica\n" },
+		{ "Comment", "//ejemplo de una variable de instancia publica \n" },
 #endif
 		{ "ModuleRelativePath", "MyActorTest.h" },
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "ejemplo de una variable de instancia publica" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_edad_MetaData[] = {
+		{ "Category", "MyActorTest" },
+		{ "ModuleRelativePath", "MyActorTest.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_esInstructor_MetaData[] = {
+		{ "Category", "MyActorTest" },
+		{ "ModuleRelativePath", "MyActorTest.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_nombre_MetaData[] = {
+		{ "Category", "MyActorTest" },
+		{ "ModuleRelativePath", "MyActorTest.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_MyFloatVariable;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_edad;
+	static void NewProp_esInstructor_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_esInstructor;
+	static const UECodeGen_Private::FStrPropertyParams NewProp_nombre;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_AMyActorTest_MyFunction, "MyFunction" }, // 3224878943
+		{ &Z_Construct_UFunction_AMyActorTest_DemostrateFundamentals, "DemostrateFundamentals" }, // 3311221626
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -97,8 +113,18 @@ struct Z_Construct_UClass_AMyActorTest_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AMyActorTest_Statics::NewProp_MyFloatVariable = { "MyFloatVariable", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyActorTest, MyFloatVariable), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MyFloatVariable_MetaData), NewProp_MyFloatVariable_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMyActorTest_Statics::NewProp_edad = { "edad", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyActorTest, edad), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_edad_MetaData), NewProp_edad_MetaData) };
+void Z_Construct_UClass_AMyActorTest_Statics::NewProp_esInstructor_SetBit(void* Obj)
+{
+	((AMyActorTest*)Obj)->esInstructor = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AMyActorTest_Statics::NewProp_esInstructor = { "esInstructor", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AMyActorTest), &Z_Construct_UClass_AMyActorTest_Statics::NewProp_esInstructor_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_esInstructor_MetaData), NewProp_esInstructor_MetaData) };
+const UECodeGen_Private::FStrPropertyParams Z_Construct_UClass_AMyActorTest_Statics::NewProp_nombre = { "nombre", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMyActorTest, nombre), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_nombre_MetaData), NewProp_nombre_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMyActorTest_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorTest_Statics::NewProp_MyFloatVariable,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorTest_Statics::NewProp_edad,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorTest_Statics::NewProp_esInstructor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMyActorTest_Statics::NewProp_nombre,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMyActorTest_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMyActorTest_Statics::DependentSingletons[])() = {
@@ -141,10 +167,10 @@ AMyActorTest::~AMyActorTest() {}
 struct Z_CompiledInDeferFile_FID_Oliver_GitHub_UnrealEngineArdenC2025_UnrealEngineArdenC2025_UECArden_Source_UECArden_MyActorTest_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMyActorTest, AMyActorTest::StaticClass, TEXT("AMyActorTest"), &Z_Registration_Info_UClass_AMyActorTest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyActorTest), 2665602365U) },
+		{ Z_Construct_UClass_AMyActorTest, AMyActorTest::StaticClass, TEXT("AMyActorTest"), &Z_Registration_Info_UClass_AMyActorTest, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMyActorTest), 2124758435U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Oliver_GitHub_UnrealEngineArdenC2025_UnrealEngineArdenC2025_UECArden_Source_UECArden_MyActorTest_h_1310361019(TEXT("/Script/UECArden"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Oliver_GitHub_UnrealEngineArdenC2025_UnrealEngineArdenC2025_UECArden_Source_UECArden_MyActorTest_h_231538772(TEXT("/Script/UECArden"),
 	Z_CompiledInDeferFile_FID_Oliver_GitHub_UnrealEngineArdenC2025_UnrealEngineArdenC2025_UECArden_Source_UECArden_MyActorTest_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Oliver_GitHub_UnrealEngineArdenC2025_UnrealEngineArdenC2025_UECArden_Source_UECArden_MyActorTest_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

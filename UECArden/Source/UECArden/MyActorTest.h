@@ -22,12 +22,18 @@ protected:
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-	//ejemplo de una variable de instancia publica
+	//ejemplo de una variable de instancia publica 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MyActorTest")
 	float MyFloatVariable;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MyActorTest")
+	int edad;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MyActorTest")
+	bool esInstructor;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "MyActorTest")
+	FString nombre;
 
 	//ejemplo de una funcion publica
 	UFUNCTION(BlueprintCallable, Category = "MyActorTest")
-	void MyFunction();
+	void DemostrateFundamentals();
 };
 
