@@ -42,3 +42,15 @@ void ATransformModifierActor::ModifyTargetTransform()
 	}
 }
 
+void ATransformModifierActor::MoveToNextPosition()
+{
+}
+
+void ATransformModifierActor::ChangeMaterial()
+{
+}
+
+void ATransformModifierActor::DrawDebugSphere() const
+{
+}
+

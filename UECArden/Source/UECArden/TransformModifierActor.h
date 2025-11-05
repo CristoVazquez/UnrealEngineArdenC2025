@@ -26,12 +26,29 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Transform")
 	void ModifyTargetTransform();
 
+	UFUNCTION(BlueprintCallable, Category = "Transform")
+	void MoveToNextPosition();
+
+	UFUNCTION(BlueprintCallable, Category = "Transform")
+	void ChangeMaterial();
+
+	void DrawDebugSphere() const;
+
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Transform")
 	AActor* TargetActor;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Transform")
 	FTransform NewTransform;
-
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Transform")
+	TArray<FVector> Positions;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Transform")
+	TArray<UMaterialInterface*> Materials;
+	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Transform")
+	int32 CurrentPositionIndex;
 	
 
 };

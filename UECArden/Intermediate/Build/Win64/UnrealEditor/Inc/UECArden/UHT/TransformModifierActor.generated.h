@@ -15,6 +15,8 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define UECARDEN_TransformModifierActor_generated_h
 
 #define FID_Oliver_GitHub_UnrealEngineArdenC2025_UnrealEngineArdenC2025_UECArden_Source_UECArden_TransformModifierActor_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execChangeMaterial); \
+	DECLARE_FUNCTION(execMoveToNextPosition); \
 	DECLARE_FUNCTION(execModifyTargetTransform);
 
 
